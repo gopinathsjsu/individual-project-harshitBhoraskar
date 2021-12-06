@@ -14,7 +14,7 @@ JDK
 ## Steps to run the code
 
 1. Clone the repo and navigate to cart_management <br/>
-2. Paste the input file "Input.csv" inside the inventory folder
+2. Paste the input file "Input.csv" inside the inventory folder cart_management
 3. Open cmd navigate to the project folder ,run the command - mvn compile
 4. Then Run the command - mvn clean install
 5. After that run - mvn -X clean install exec:java -Dexec.mainClass="com.cart_management.ReadCsv" -Dexec.args="Input.csv"
