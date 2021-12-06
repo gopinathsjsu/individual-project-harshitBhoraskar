@@ -1,4 +1,4 @@
-package com.inventory;
+package com.cart_management;
 import java.io.*;
 import java.util.*;
 
@@ -139,14 +139,5 @@ public class ReadCsv {
                 .build();
     }
 
-    static Category toValue(String category)
-    {
-        return switch (category) {
-            case "Essential" -> Category.ESSENTIALS;
-            case "Luxury" -> Category.LUXURY;
-            case "Miscellaneous" -> Category.MISCELLENEOUS;
-            default -> Category.MISCELLENEOUS;
-        };
-    }
 }
 

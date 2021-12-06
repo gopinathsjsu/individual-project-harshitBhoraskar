@@ -1,4 +1,4 @@
-package com.inventory;
+package com.cart_management;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -13,7 +13,7 @@ public class Misc implements Chain{
     }
 
     @Override
-    public double calculateTotal(HashMap<String, Items> inventory , String item , int quantity, Set<String> error,
+    public double calculateTotal(HashMap<String, Items> cart , String item , int quantity, Set<String> wrongQuantities,
                                  Set<String> readEssentials,Set<String> readLuxury,Set<String> readMisc)    {
         Items items = inventry.get(item);
         if(items.Category == Category.MISCELLENEOUS){

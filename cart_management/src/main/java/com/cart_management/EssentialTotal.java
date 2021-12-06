@@ -1,4 +1,4 @@
-package com.inventory;
+package com.cart_management;
 
 public class EssentialTotal {
     private static EssentialTotal essentialTotal = null;

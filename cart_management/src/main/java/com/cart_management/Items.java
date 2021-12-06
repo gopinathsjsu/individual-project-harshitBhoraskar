@@ -1,4 +1,4 @@
-package com.inventory;
+package com.cart_management;
 
 import lombok.Builder;
 import lombok.Getter;
