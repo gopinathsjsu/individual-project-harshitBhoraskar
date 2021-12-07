@@ -2,8 +2,8 @@ package cart_management.src.main.java.com.cart_management;
 import java.io.*;
 import java.util.*;
 
-import au.com.bytecode.opencsv.CSVReader;
-import au.com.bytecode.opencsv.CSVWriter;
+//import au.com.bytecode.opencsv.CSVReader;
+//import au.com.bytecode.opencsv.CSVWriter;
 import cart_management.src.main.java.com.cart_management.ItemInstance;
 
 public class ReadCsv {
@@ -117,7 +117,7 @@ public class ReadCsv {
             return null;
 
         ItemInstance itemInstance = new ItemInstance();
-        itemInstance.setCategory((entrie[0]);
+        itemInstance.setCategory(entrie[0]);
         itemInstance.setItem(entrie[1]);
         itemInstance.setQuantity(Integer.valueOf(entrie[2].trim()));
         itemInstance.setPrice(Double.valueOf(entrie[3].trim()));
