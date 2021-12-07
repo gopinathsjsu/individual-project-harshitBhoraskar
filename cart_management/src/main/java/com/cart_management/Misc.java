@@ -1,4 +1,4 @@
-package cart_management.src.main.java.com.cart_management;
+package com.cart_management;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -14,9 +14,9 @@ public class Misc implements Cart{
 
     @Override
     public double calculateTotal(HashMap<String, ItemInstance> cart , String item , int quantity, Set<String> wrongQuantities,
-                                 Set<String> readEssentials,Set<String> readLuxury,Set<String> readMisc)    {
+                                 Set<String> readEssentials, Set<String> readLuxury, Set<String> readMisc)    {
         ItemInstance items = cart.get(item);
-        if(items.Category == "MISCELLENEOUS"){
+        if(items.Category.equals("MISCELLENEOUS")){
             readMisc.add(item);
             if(quantity<=items.getQuantity()){
                 EssentialTotal.setMiscSum(EssentialTotal.getMiscSum()-quantity);
@@ -28,8 +28,6 @@ public class Misc implements Cart{
                 return 0;
             }
         }
-        else {
-            return setCartCategory.calculateTotal(cart,item , quantity,wrongQuantities,readEssentials,readLuxury,readMisc);
-        }
+      return 0;
     }
 }

@@ -1,4 +1,4 @@
-package cart_management.src.main.java.com.cart_management;
+package com.cart_management;
 
 public class EssentialTotal {
     private static EssentialTotal essentialTotal = null;

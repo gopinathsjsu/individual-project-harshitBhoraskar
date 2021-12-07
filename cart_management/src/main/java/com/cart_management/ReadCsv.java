@@ -1,10 +1,10 @@
-package cart_management.src.main.java.com.cart_management;
+package com.cart_management;
 import java.io.*;
 import java.util.*;
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
+import au.com.bytecode.opencsv.CSVWriter;
 
-//import au.com.bytecode.opencsv.CSVReader;
-//import au.com.bytecode.opencsv.CSVWriter;
-import cart_management.src.main.java.com.cart_management.ItemInstance;
 
 public class ReadCsv {
 
@@ -27,13 +27,13 @@ public class ReadCsv {
                 inventoryItems.put(itemInstance.getItem(), itemInstance);
 
         }
-        System.out.println(cards);
+
         for(String[] card:allCards)
         {
             cards.add(card[0]);
 
         }
-        System.out.println(cards);
+
         Essentials essentials = new Essentials();
         Luxury luxury = new Luxury();
         Misc misc = new Misc();
@@ -117,8 +117,8 @@ public class ReadCsv {
             return null;
 
         ItemInstance itemInstance = new ItemInstance();
-        itemInstance.setCategory(entrie[0]);
-        itemInstance.setItem(entrie[1]);
+        itemInstance.setCategory(entrie[0].trim());
+        itemInstance.setItem(entrie[1].trim());
         itemInstance.setQuantity(Integer.valueOf(entrie[2].trim()));
         itemInstance.setPrice(Double.valueOf(entrie[3].trim()));
         return itemInstance;

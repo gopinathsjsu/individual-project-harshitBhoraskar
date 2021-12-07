@@ -1,9 +1,9 @@
-package cart_management.src.main.java.com.cart_management;
+package com.cart_management;
 
 //import cart_management.src.main.java.com.cart_management.Category;
-import cart_management.src.main.java.com.cart_management.Cart;
-import cart_management.src.main.java.com.cart_management.EssentialTotal;
-import cart_management.src.main.java.com.cart_management.ItemInstance;
+import com.cart_management.Cart;
+import com.cart_management.EssentialTotal;
+import com.cart_management.ItemInstance;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -26,7 +26,7 @@ public class Essentials implements Cart {
     {
         ItemInstance itemInstance = cart.get(item);
 
-        if(itemInstance.Category == "Essential"){
+        if(itemInstance.Category.equals("Essential")){
             readEssentials.add(item);
             if(quantity<=itemInstance.getQuantity()){
                 EssentialTotal.setEssentialCount(EssentialTotal.getEssentialCount()- quantity);

@@ -1,4 +1,4 @@
-package cart_management.src.main.java.com.cart_management;
+package com.cart_management;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -17,7 +17,7 @@ public class Luxury implements Cart{
                                  Set<String> readEssentials,Set<String> readLuxury,Set<String> readMisc)
     {
         ItemInstance itemInstance = cart.get(item);
-        if(itemInstance.Category == "Luxury"){
+        if(itemInstance.Category.equals("Luxury")){
             readLuxury.add(item);
             if( quantity<=itemInstance.getQuantity()){
                 EssentialTotal.setLuxurySum(  EssentialTotal.luxurySum() -quantity);
